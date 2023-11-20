@@ -26,10 +26,6 @@
         </thead>
         @foreach($posts  as $post)
         <tbody>
-       <a href="{{ route('posts.show',$post->id) }}">
-           {{ $post->title }}
-           {{ Str::limit($post->content,30) }}
-       </a>
             <tr>
                 <th scope="row" style="width: 50px">{{ $post->id }}</th>
                 <td style="text-align: right">{{ $post->id }}</td>
