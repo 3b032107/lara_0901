@@ -33,8 +33,11 @@
                 <td style="text-align: right">{{ ($post->is_feature)? 'v':'x' }}</td>
                 <td style="width: 150px">
                     <a href="{{ route('admin.posts.edit',$post->id) }}">編輯</a>
-                    <a href="#">刪除</a>
+                    <form action="{{ route('admin.posts.destroy') }}" method="POST" style="display: inline-block">
+                        @method('DELETE')
+                        @csrf
                         <button type="button" class="btn btn-danger btn-sm">刪除</button>
+                    </form>
                 </td>
             </tr>
         @endforeach
