@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('page-title', 'Blog Post')
+@section('title', $post->title)
 
 @section('page-style')
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -10,6 +10,8 @@
 @section('page-content')
     <!-- Page content-->
     <div class="container mt-5">
+        <h1>{{ $post->title }}</h1>
+        <h2 class="subheading"></h2>
         <div class="row">
             <div class="col-lg-8">
                 <!-- Post content-->
