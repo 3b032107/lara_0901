@@ -52,7 +52,11 @@ $post->content) }}</textarea>
                                 <option value="1" {{ ($post->is_feature)? ' selected' : '' }}>是</option>
                             </select>
                     </form>
-                    
+                    <form action="{{ route('admin.posts.destroy',$post->id) }}" method="POST" style="display: inline-block">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-sm btn-danger" type="submit">刪除</button>
+                    </form>
                 </td>
             </tr>
         @endforeach
