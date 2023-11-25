@@ -3,6 +3,7 @@
 @section('page-title', 'Create article')
 
 @section('page-content')
+
 <div class="container-fluid px-4">
     <h1 class="mt-4">文章管理</h1>
     <ol class="breadcrumb mb-4">
@@ -19,7 +20,7 @@
                 <strong>哎呀! 出了些問題!</strong>
 
                 <br><br>
-
+        @include('layouts.shared.errors')
                 <ul>
                     @foreach($errors->all() as $error)
                         <li>{{ $error }}</li>

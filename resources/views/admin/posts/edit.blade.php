@@ -19,7 +19,7 @@
             <strong>哎呀! 出了點問題!</strong>
 
             <br><br>
-
+            @include('layouts.shared.errors')
             <ul>
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
